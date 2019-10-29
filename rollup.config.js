@@ -1,19 +1,27 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
 
-const prod = !process.env.ROLLUP_WATCH;
+const watch = !process.env.ROLLUP_WATCH;
 
-export default {
-    input: 'src/main.js',
-    output: {
-        file: 'public/bundle.js',
-        format: 'esm',
-        sourcemap: true
+const plugins = [
+    resolve(),
+    commonjs(),
+    watch && terser(),
+    !watch && serve({ contentBase: './public', verbose: true }),
+    !watch && livereload(),
+];
+
+export default [
+    {
+        input: 'src/index.js',
+        output: {
+            file: 'public/index.js',
+            format: 'esm',
+            sourcemap: true
+        },
+        plugins,
     },
-    plugins: [
-        resolve(),
-        commonjs(),
-        prod && terser(),
-    ]
-};
+];
