@@ -6,6 +6,7 @@
   "author": "Overamigos",
   "devDependencies": {
     "eslint": "^6.6.0",
+    "prettier": "1.18.2",
     "rollup": "^1.26.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-livereload": "^1.0.4",
@@ -15,7 +16,8 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w",
+    "format": "prettier --write \"src/**/*.js\""
   },
   "dependencies": {}
 }
