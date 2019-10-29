@@ -1,0 +1,17 @@
+{
+  "name": "savage-dice",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:Overamigos/SavageDice.git",
+  "author": "Overamigos",
+  "devDependencies": {
+    "rollup": "^1.26.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  }
+}

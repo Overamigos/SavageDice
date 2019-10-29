@@ -28,7 +28,7 @@ function d10() {
     return roll(10);
 }
 
-function d12() {
+export function d12() {
     return roll(12);
 }
 
@@ -41,7 +41,7 @@ function _4d10() {
     return sum;
 }
 
-function rollAgainst(what, attacks, dieFn, wildCard, bonus) {
+export function rollAgainst(what, attacks, dieFn, wildCard, bonus) {
     const successes = [];
     for (let i = 0; i < attacks; ++i) {
         const genericDie = dieFn();
