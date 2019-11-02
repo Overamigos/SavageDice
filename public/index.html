@@ -7,6 +7,12 @@
         <script type="module" src="/index.js" async></script>
     </head>
     <body>
-        <input type="number" id="against"/>
+        <label for="die-sides">lados do dados</label><input type="number" id="die-sides"/>
+        <label for="die-amount">quantidade de dados</label><input type="number" id="die-amount"/>
+        <label for="die-ace">dados estouram?</label><input type="checkbox" id="die-ace"/>
+        <button id="die-add">adicionar dado</button>
+        <label for="action-wild">usar dado wild na ação?</label><input type="checkbox" id="action-wild"/>
+        <label for="action-modifier">modificador da ação</label><input type="number" id="action-modifier"/>
+        <button id="action-execute">executar ação</button>
     </body>
 </html>
