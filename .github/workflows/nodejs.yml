@@ -20,7 +20,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: yarn install and build
       run: |
-        yarn install --production
+        yarn install
         yarn build
       env:
         CI: true
