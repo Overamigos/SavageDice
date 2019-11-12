@@ -1,0 +1,2 @@
+function n(t){const e=Math.round(Math.random()*t)+1;return e===t?e+n(t):e}function t(){return n(12)}var e;e=function(){document.getElementById("against").addEventListener("change",(function(){const e=this.value;console.log(function(t,e,o,a,d){const c=[];for(let s=0;s<e;++s){const e=o(),s=a?n(6):0,i=((r=e)>(u=s)?r:u)+d;console.log(`rolled ${e} and ${s}, max was ${i}`),i>=t&&c.push(i)}var r,u;return c}(e,4,t,!1,0))}))},"loading"!==document.readyState?e():document.addEventListener("DOMContentLoaded",e);
+//# sourceMappingURL=index.js.map
